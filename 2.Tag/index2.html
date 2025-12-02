@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türchen geöffnet</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container für Button + Überschrift */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1; /* über dem Hintergrundbild */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Hintergrundbild */
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 1s ease;
+            z-index: 0;
+        }
+
+        /* Bild sichtbar machen */
+        .show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <h1>Bastelidee</h1>
+        <button id="openButton">2. Türchen öffnen</button>
+    </div>
+
+    <img src="BaumBasteln.png" alt="Nikolaus" class="background-img" id="background">
+
+    <script>
+        const button = document.getElementById('openButton');
+        const container = document.getElementById('container');
+        const background = document.getElementById('background');
+
+        button.addEventListener('click', () => {
+            // Container ausblenden
+            container.style.display = 'none';
+            // Hintergrundbild einblenden
+            background.classList.add('show');
+        });
+    </script>
+
+</body>
+</html>

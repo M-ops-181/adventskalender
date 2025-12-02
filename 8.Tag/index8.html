@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Türchen geöffnet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url("Weihnachten.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* halbtransparenter Hintergrund für bessere Lesbarkeit */
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        #content {
+            margin-top: 30px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Weihnachten</h1>
+    <button class="button" onclick="openDoor()">Schwedische Übersetzung</button>
+
+    <div id="content" class="hidden">
+        Jul
+    </div>
+</div>
+
+<script>
+    function openDoor() {
+        const content = document.getElementById('content');
+        content.classList.remove('hidden');
+    }
+</script>
+</body>
+</html>

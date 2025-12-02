@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Türchen öffnen – Pistazienplätzchen</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("Pistazienplätzchen.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        max-width: 600px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        text-align: left;
+    }
+
+    h2 {
+        color: #4CAF50;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .button {
+        display: block;
+        margin: 20px auto 0 auto;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Türchen 4 – Pistazienplätzchen</h1>
+    <button class="button" onclick="openDoor()">Türchen öffnen</button>
+
+    <div id="content" class="hidden">
+        <h2>Zutaten für den Teig</h2>
+        <ul>
+            <li>75 g gemahlene Mandeln</li>
+            <li>200 g Zucker</li>
+            <li>2 Eiweiß</li>
+            <li>200 g Pistazien</li>
+            <li>Puderzucker</li>
+        </ul>
+
+        <h2>Anleitungen</h2>
+        <ol>
+            <li>Backofen auf 170°C (Ober- und Unterhitze) vorheizen. Mandeln, Haselnüsse, Zucker, Vanillezucker und Eiweiß in eine Schüssel geben. Pistazien fein mahlen, dazugeben und zu einem Teig verkneten.</li>
+            <li>Puderzucker in einen tiefen Teller geben. Teig mit feuchten Händen zu Kugeln formen, in Puderzucker wälzen und auf zwei mit Backpapier belegte Backbleche legen. Nacheinander auf mittlerer Schiene ca. 10 Minuten backen.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+function openDoor() {
+    document.getElementById('content').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
